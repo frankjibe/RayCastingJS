@@ -5,6 +5,10 @@ const CWIDTH=TILESIZE*NUMCOL;
 const CHEIGHT=TILESIZE*NUMCOL;
 
 
+
+/************************************************
+ * Classe Mappa
+ ***********************************************/
 class Mappa {
     constructor(){
         this.grid = [
@@ -26,7 +30,6 @@ class Mappa {
         ]
     }
     
-
     render(){
         for(var i=0; i<NUMROW; i++){
             for(var j=0; j<NUMCOL;j++){
@@ -43,6 +46,9 @@ class Mappa {
 }
 
 
+/************************************************
+ * Classe Player
+ ***********************************************/
 class Player{
     constructor(){
         this.x=TILESIZE*NUMROW/2;
@@ -85,8 +91,7 @@ class Player{
                 this.y=nextY
             } 
         }
-
-        
+    
     }
 
     render(){
@@ -120,10 +125,18 @@ class Player{
 
 
 
+/************************************************
+ * Globals
+ ***********************************************/
 
 var grid= new Mappa();
 var p= new Player();
 
+
+
+/************************************************
+ * GameLoop
+ ***********************************************/
 
 function setup(){
     //TODO Inizializzione oggetti
@@ -132,11 +145,9 @@ function setup(){
 
 function update(){
     p.update();
-
 }
 
 function draw(){
-
     update();
     grid.render();
     p.render();
