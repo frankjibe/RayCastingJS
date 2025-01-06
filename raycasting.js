@@ -68,7 +68,7 @@ class Player{
             nextX =this.x + Math.cos(this.angle)*this.speed;
             nextY =this.y + Math.sin(this.angle)*this.speed;
 
-            if(grid.grid[floor(nextY/TILESIZE)][floor(nextX/TILESIZE)]!==1){         
+            if(grid.grid[floor(nextY/TILESIZE)][floor(nextX/TILESIZE)]==0){         
                 this.x = nextX;
                 this.y=nextY
             } 
@@ -80,7 +80,7 @@ class Player{
             nextX =this.x - Math.cos(this.angle)*this.speed;
             nextY =this.y - Math.sin(this.angle)*this.speed;
 
-            if(grid.grid[floor(nextY/TILESIZE)][floor(nextX/TILESIZE)]!==1){         
+            if(grid.grid[floor(nextY/TILESIZE)][floor(nextX/TILESIZE)]==0){         
                 this.x = nextX;
                 this.y=nextY
             } 
